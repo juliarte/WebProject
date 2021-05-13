@@ -5,16 +5,16 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class MySpringMVSDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return null; //do not use it
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[0];
+        return new Class[] {SpringConfig.class}; //from web xml
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[0];
+        return new String[] {"/"}; //from web xml
     }
 }
